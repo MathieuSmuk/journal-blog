@@ -1,0 +1,53 @@
+.editor-preview-layout {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.editor-panel,
+.preview-panel {
+  flex: 1;
+}
+
+.post-textarea {
+  width: 100%;
+  min-height: 300px;
+  resize: vertical;
+}
+
+.preview-panel {
+  border: 1px solid #ccc;
+  padding: 15px;
+  min-height: 300px;
+}
+
+.markdown-help {
+  border: 1px solid #ccc;
+  padding: 10px 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: #f8f8f8;
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.post-form-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tag-checkbox-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.tag-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}

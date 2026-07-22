@@ -1,0 +1,80 @@
+.post-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  min-height: 260px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
+}
+
+.post-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.35rem;
+}
+
+.post-card h3 a {
+  color: #222;
+  text-decoration: none;
+}
+
+.post-card h3 a:hover {
+  color: #4b7bec;
+}
+
+.post-meta {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.post-preview {
+  color: #444;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.post-preview p {
+  margin-bottom: 0.75rem;
+}
+
+.draft-badge {
+  display: inline-block;
+  background-color: #fff3cd;
+  color: #856404;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+}
+
+.read-more-link {
+  margin-top: 1rem;
+  color: #4b7bec;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.read-more-link:hover {
+  text-decoration: underline;
+}
+
+.post-card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}

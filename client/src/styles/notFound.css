@@ -1,0 +1,31 @@
+.not-found-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.not-found-card {
+  text-align: center;
+  max-width: 600px;
+  padding: 40px;
+}
+
+.not-found-card h1 {
+  font-size: 5rem;
+  margin-bottom: 10px;
+}
+
+.not-found-card h2 {
+  margin-bottom: 20px;
+}
+
+.not-found-card p {
+  margin-bottom: 30px;
+}
+
+.not-found-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}

@@ -1,0 +1,19 @@
+.site-footer {
+  background: linear-gradient(to right, #222, #2c2c2c);
+
+  color: #ddd;
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid #444;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.site-footer small {
+  display: block;
+  margin-top: 0.5rem;
+  color: #aaa;
+}

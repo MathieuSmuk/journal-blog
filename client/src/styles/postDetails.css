@@ -1,0 +1,120 @@
+.post-details-page {
+  display: flex;
+  justify-content: center;
+}
+
+.post-details-card {
+  width: 100%;
+  max-width: 850px;
+
+  background-color: white;
+
+  padding: 3rem;
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.post-details-card h1 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+
+  font-size: 2.8rem;
+  line-height: 1.2;
+}
+
+.post-meta {
+  color: #666;
+  font-size: 0.95rem;
+
+  margin-bottom: 0.5rem;
+}
+
+.post-updated {
+  color: #888;
+  font-size: 0.9rem;
+  font-style: italic;
+
+  margin-bottom: 2rem;
+}
+
+.post-status {
+  margin-top: 2rem;
+  color: #666;
+  font-weight: bold;
+}
+
+.post-created {
+  display: block;
+  margin-top: 1rem;
+
+  color: #888;
+}
+
+.action-error {
+  margin-top: 1rem;
+  color: #d63031;
+  font-weight: bold;
+}
+
+.post-details-card p {
+  line-height: 1.8;
+}
+
+.post-details-card ul,
+.post-details-card ol {
+  padding-left: 2rem;
+}
+
+.post-details-card pre {
+  overflow-x: auto;
+}
+
+.post-details-card img {
+  max-width: 100%;
+}
+
+/*
+Badge style post status
+*/
+
+.post-status {
+  display: inline-block;
+
+  background-color: #eef3ff;
+  color: #4b7bec;
+
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+
+  margin-top: 2rem;
+}
+
+/*
+Card animation
+*/
+
+.post-details-card {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.post-details-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.1);
+}
+
+/*
+Post image
+*/
+
+.post-details-image {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+
+  border-radius: 16px;
+  margin: 2rem 0;
+}

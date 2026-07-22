@@ -1,0 +1,17 @@
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import "../../styles/layout.css";
+
+function Layout({ children }) {
+  return (
+    <div className="app-layout">
+      <Navbar />
+
+      <main className="app-main">{children}</main>
+
+      <Footer />
+    </div>
+  );
+}
+
+export default Layout;

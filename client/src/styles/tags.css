@@ -1,0 +1,36 @@
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.tag-badge {
+  display: inline-block;
+  background-color: #eef3ff;
+  color: #4b7bec;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+}
+
+.tag-button {
+  border: none;
+  cursor: pointer;
+}
+
+.tag-button:hover {
+  background-color: #dbe6ff;
+}
+
+.category-badge {
+  display: inline-block;
+  background-color: #222;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}

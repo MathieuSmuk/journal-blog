@@ -1,0 +1,86 @@
+nav {
+  background-color: #222;
+  color: white;
+  padding: 1rem 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #4da3ff;
+}
+
+.welcome-message {
+  font-weight: bold;
+  color: #ddd;
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+
+  transition: color 0.2s ease;
+}
+
+.logout-button:hover {
+  color: #ff7b7b;
+}
+
+/*
+Title animation effects
+*/
+
+.site-title {
+  color: white;
+  text-decoration: none;
+}
+
+.site-title:hover {
+  color: #4da3ff;
+}
+
+.welcome-message {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.welcome-message:hover {
+  color: #4da3ff;
+}
