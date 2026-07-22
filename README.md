@@ -1,8 +1,23 @@
 # Journal Blog Platform
 
+![Journal Blog](docs/screenshots/home.png)
+
 A full-stack journal and blogging application built with React, Express, PostgreSQL, and JWT authentication.
 
 Users can register, log in, create published posts or private drafts, write content using Markdown, organize posts with categories and tags, add image URLs, search published posts, and view public author profiles.
+
+## Table of Contents
+
+- Features
+- Technology Stack
+- Installation
+- Environment Variables
+- Running the Application
+- Usage
+- API Routes
+- Screenshots
+- Deployment
+- Future Improvements
 
 ## Features
 
@@ -24,6 +39,14 @@ Users can register, log in, create published posts or private drafts, write cont
 - Custom frontend and API 404 handling
 - PostgreSQL transactions for post and tag updates
 - Responsive navigation and reusable React components
+
+## Repository
+
+https://github.com/MathieuSmuk/journal-blog
+
+## Live Demo
+
+Deployment coming soon.
 
 ## Demo Accounts
 
@@ -47,8 +70,8 @@ Each account has its own private drafts. Logging in with both accounts can be us
 
 ### Frontend
 
-- React
-- Vite
+- React 19
+- Vite 7
 - React Router
 - React Hot Toast
 - Markdown rendering
@@ -57,7 +80,7 @@ Each account has its own private drafts. Logging in with both accounts can be us
 ### Backend
 
 - Node.js
-- Express
+- Express 5
 - JSON Web Tokens
 - bcrypt
 - CORS
@@ -72,29 +95,45 @@ Each account has its own private drafts. Logging in with both accounts can be us
 
 ```text
 journal-blog/
+├── .gitignore
+├── README.md
 ├── client/
+│   ├── public/
 │   ├── src/
+│   │   ├── assets/
 │   │   ├── components/
+│   │   │   ├── layout/
+│   │   │   ├── routes/
+│   │   │   └── ui/
 │   │   ├── config/
+│   │   ├── context/
+│   │   ├── hooks/
 │   │   ├── pages/
+│   │   ├── services/
 │   │   ├── styles/
 │   │   ├── utils/
 │   │   ├── App.jsx
 │   │   └── main.jsx
+│   ├── .env.example
 │   ├── package.json
 │   └── vite.config.js
-│
-├── server/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── routes/
-│   ├── db/
-│   ├── server.js
-│   └── package.json
-│
-├── schema.sql
-├── seed.sql
-└── README.md
+├── docs/
+│   └── screenshots/
+└── server/
+    ├── config/
+    ├── controllers/
+    ├── db/
+    │   ├── schema.sql
+    │   └── seed.sql
+    ├── middleware/
+    ├── models/
+    ├── routes/
+    ├── utils/
+    ├── .env.example
+    ├── package.json
+    └── server.js
+
+    Note: node_modules, .env, and production build folders are intentionally omitted from the project structure because they are generated locally and are excluded from version control.
 ```
 
 ## Database Design
@@ -162,7 +201,7 @@ Install the following before running the project:
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/MathieuSmuk/journal-blog.git
 cd <your-project-folder>
 ```
 
@@ -356,55 +395,31 @@ Deletion requires confirmation and displays a toast notification after completio
 
 ### Authentication
 
-```text
-GET    /api/posts
-GET    /api/posts/my-drafts
-GET    /api/posts/:id
-POST   /api/posts
-PUT    /api/posts/:id
-DELETE /api/posts/:id
-
-```
+POST /api/auth/register
+POST /api/auth/login
 
 ### Posts
 
-```text
-GET    /api/posts
-GET    /api/posts/my-drafts
-GET    /api/posts/:id
-POST   /api/posts
-PUT    /api/posts/:id
+GET /api/posts
+GET /api/posts/my-drafts
+GET /api/posts/:id
+POST /api/posts
+PUT /api/posts/:id
 DELETE /api/posts/:id
-
-```
-
-### Auth
-
-```text
-POST   /api/auth/register
-POST   /api/auth/login
-
-```
 
 ### Tags
 
-```text
-GET    /api/tags
-POST   /api/tags
-PUT    /api/tags/:id
-```
+GET /api/tags
+POST /api/tags
+PUT /api/tags/:id
 
 ### Categories
 
-```text
 GET /api/categories
-```
 
 ### Users
 
-```text
 GET /api/users/:id
-```
 
 The exact route behavior and response fields can be reviewed in the server route and controller files.
 
@@ -466,6 +481,10 @@ API health check: <backend-url>
 
 ## Screenshots
 
+### Home
+
+![Main homepage](docs/screenshots/home.png)
+
 ### Dashboard
 
 ![Journal Blog dashboard](docs/screenshots/dashboard.png)
@@ -482,21 +501,13 @@ API health check: <backend-url>
 
 ![User drafts page](docs/screenshots/drafts.png)
 
-### Home
-
-![Main homepage](docs/screenshots/home.png)
-
-### 404 page
-
-![404 landing page](docs/screenshots/not-found.png)
-
 ### Profile
 
 ![User profile page](docs/screenshots/profile.png)
 
-## Live Demo
+### 404 page
 
-Deployment coming soon.
+![404 landing page](docs/screenshots/not-found.png)
 
 ## Known Limitations
 
@@ -522,6 +533,18 @@ Possible future enhancements include:
 - Accessibility improvements
 - Dark mode
 - User avatars
+
+## Key Learning Outcomes
+
+This project allowed me to gain practical experience with:
+
+- Designing a relational PostgreSQL database
+- Building a RESTful API with Express
+- Creating a React single-page application
+- Managing authentication using JWT
+- Implementing authorization for protected resources
+- Handling many-to-many database relationships
+- Deploying a full-stack application
 
 ## What This Project Demonstrates
 
