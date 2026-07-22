@@ -4,10 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "dev": "nodemon server.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "journal",
+    "blog",
+    "express",
+    "postgresql"
+  ],
+  "author": "Mathieu Smuk",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^6.0.0",
