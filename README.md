@@ -46,7 +46,7 @@ https://github.com/MathieuSmuk/journal-blog
 
 ## Live Demo
 
-Deployment coming soon.
+[Open the Journal Blog Platform](https://journal-blog-d2qr.onrender.com/)
 
 ## Demo Accounts
 
@@ -202,7 +202,7 @@ Install the following before running the project:
 
 ```bash
 git clone https://github.com/MathieuSmuk/journal-blog.git
-cd <your-project-folder>
+cd journal-blog
 ```
 
 ### 2. Install frontend dependencies
@@ -237,28 +237,9 @@ The schema file drops and recreates the application tables. Do not run it agains
 
 ## Environment Variables
 
-Create a `.env` file in the server folder.
+For a first-time local setup, copy the existing `server/.env.example` file and name the copy `server/.env`.
 
-Example:
-
-```env
-DB_USER=postgres
-DB_HOST=localhost
-DB_NAME=journal_blog
-DB_PASSWORD=your_password
-DB_PORT=5432
-JWT_SECRET=replace_with_a_long_random_secret
-CLIENT_URL=http://localhost:5173
-PORT=3000
-```
-
-Use the variable format that matches the database connection file in the project.
-
-Do not commit the `.env` file to GitHub.
-
-Create a `.env.example` file containing only placeholder values so other developers know which variables are required.
-
-Example:
+Open `server/.env` and configure it for your local PostgreSQL database. The following example shows the expected settings:
 
 ```env
 DB_USER=postgres
@@ -266,10 +247,23 @@ DB_HOST=localhost
 DB_NAME=journal_blog
 DB_PASSWORD=your_database_password
 DB_PORT=5432
-JWT_SECRET=your_long_random_secret
-PORT=3000
+JWT_SECRET=replace_with_a_long_random_secret
 CLIENT_URL=http://localhost:5173
+PORT=3000
 ```
+
+In your local `server/.env` file:
+
+- Set `DB_USER` and `DB_PASSWORD` to your PostgreSQL username and password.
+- Set `DB_NAME` to the database you created for this application.
+- Set `JWT_SECRET` to a long, randomly generated secret used to sign and verify authentication tokens.
+- Adjust the host, ports, and client URL if your local setup differs from this example.
+
+If you already have a working `server/.env`, keep your existing configuration.
+
+The values shown above are placeholders for documentation. Never put real database passwords or JWT secrets in this README or in `.env.example`.
+
+Keep `server/.env` excluded from Git through `.gitignore`.
 
 ## Running the Application
 
@@ -425,13 +419,13 @@ The exact route behavior and response fields can be reviewed in the server route
 
 ## Suggested Testing Checklist
 
-Before deployment, verify the following:
+Use this checklist when testing locally and after deploying changes:
 
 - A new user can register.
 - A registered user can log in.
 - Invalid login credentials produce an error.
 - Logout removes the stored token and user.
-- Expired or invalid sessions redirect to Login.
+- Expired or invalid JWTs are rejected by protected API routes.
 - A user can create a published post.
 - A user can create a private draft.
 - Drafts are visible only to their owners.
@@ -455,7 +449,7 @@ Before deployment, verify the following:
 
 ## Deployment
 
-A suitable deployment setup is:
+The application is deployed using:
 
 - Frontend: Render static site
 - Backend: Render web service
@@ -471,13 +465,6 @@ PORT=<provided-by-host>
 ```
 
 The frontend API configuration should use the deployed backend URL rather than a hardcoded localhost address.
-
-After deployment, update this README with:
-
-```text
-Live application: <frontend-url>
-API health check: <backend-url>
-```
 
 ## Screenshots
 
@@ -570,3 +557,7 @@ Mathieu Smuk
 This project is intended as a portfolio and educational project.
 
 Add a license file if you plan to allow others to copy, modify, or redistribute the code.
+
+```
+
+```
